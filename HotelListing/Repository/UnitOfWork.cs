@@ -20,8 +20,8 @@ namespace HotelListing.Repository
             _context = context;
         }
 
-        public IGenericRepository<Country> Countries => _countries ??= new GenericRepository<Country>(_context);
-        public IGenericRepository<Hotel> Hotels => _hotels ??= new GenericRepository<Hotel>(_context);
+        public IGenericRepository<Country> Countries => _countries ??= new GenericRepository<Country>(_context); // if countries == null then countries = new...
+        public IGenericRepository<Hotel> Hotels => _hotels ??= new GenericRepository<Hotel>(_context); // if hotels == null then hotels = new...
 
 
         public void Dispose()
@@ -29,11 +29,11 @@ namespace HotelListing.Repository
             _context.Dispose();
             GC.SuppressFinalize(this);
         }
-
         
         public async Task Save()
         {
             await _context.SaveChangesAsync();
         }
+
     }
 }

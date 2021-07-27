@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HotelListing.Configurations;
 using HotelListing.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -43,6 +44,10 @@ namespace HotelListing
                         .AllowAnyHeader();
                 });
             });
+
+
+            services.AddAutoMapper(typeof(MapperInitializer));
+
 
             services.AddSwaggerGen(c =>
             {
