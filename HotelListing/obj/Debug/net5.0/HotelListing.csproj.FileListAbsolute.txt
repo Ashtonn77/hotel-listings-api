@@ -70,3 +70,8 @@ C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\Hotel
 C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
