@@ -80,3 +80,4 @@ C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\Hotel
 C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
