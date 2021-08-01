@@ -75,3 +75,8 @@ C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\Hotel
 C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll

@@ -37,6 +37,9 @@ namespace HotelListing
                 options.UseSqlServer(Configuration.GetConnectionString("sqlConnection"));
             });
 
+            services.AddAuthentication();
+            services.ConfigureIdentity();
+
             services.AddCors(o =>
             {
                 o.AddPolicy("AllowAll", builder =>
@@ -46,11 +49,12 @@ namespace HotelListing
                         .AllowAnyHeader();
                 });
             });
-            
-            services.AddTransient<IUnitOfWork, UnitOfWork>();
 
             services.AddAutoMapper(typeof(MapperInitializer));
-            
+
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "HotelListing", Version = "v1" });
