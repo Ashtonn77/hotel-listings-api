@@ -5,8 +5,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using HotelListing.Data;
 using HotelListing.IRepository;
 using HotelListing.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Logging;
 
 namespace HotelListing.Controllers
@@ -50,7 +52,7 @@ namespace HotelListing.Controllers
         }
 
 
-        [HttpGet("{id:int}")]
+        [HttpGet("{id:int}", Name = "GetCountry")]
         public async Task<IActionResult> GetCountry(int id)
         {
 
@@ -68,6 +70,89 @@ namespace HotelListing.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error. Please try again later");
 
             }
+
+        }
+
+
+
+        [Authorize(Roles = "Administrator")]
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> CreateCountry([FromBody] CreateCountryDto countryDto)
+        {
+
+            if (!ModelState.IsValid)
+            {
+                _logger.LogInformation($"Invalid post attempt in {nameof(CreateCountry)}");
+                return BadRequest(ModelState);
+            }
+
+              
+            try
+            {
+
+                var country = _mapper.Map<Country>(countryDto);
+                await _unitOfWork.Countries.Insert(country);
+                await _unitOfWork.Save();
+
+                return CreatedAtRoute("GetCountry", new { id = country.Id }, country);
+
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, $"Something went wrong in {nameof(CreateCountry)}");
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    "Internal server error. Please try again later");
+            }
+
+
+        }
+
+
+
+        [Authorize(Roles = "Administrator")]
+        [HttpPut("{id:int}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> UpdateCountry(int id, [FromBody] UpdateCountryDto countryDto)
+        {
+
+            if (!ModelState.IsValid)
+            {
+                _logger.LogInformation($"Invalid update attempt in {nameof(UpdateCountry)}");
+                return BadRequest(ModelState);
+            }
+
+
+            try
+            {
+
+                var country = await _unitOfWork.Countries.Get(q => q.Id == id);
+
+                if (country == null)
+                {
+                    _logger.LogInformation($"Invalid update attempt in {nameof(UpdateCountry)}");
+                    return BadRequest("Submitted data is invalid");
+                }
+
+                _mapper.Map(countryDto, country);
+                _unitOfWork.Countries.Update(country);
+                await _unitOfWork.Save();
+
+                return NoContent();
+
+
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, $"Something went wrong in {nameof(UpdateCountry)}");
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    "Internal server error. Please try again later");
+            }
+
 
         }
 
