@@ -81,3 +81,6 @@ C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\Hotel
 C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\JetBrains.Annotations.dll
+C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\X.PagedList.dll
+C:\Users\ashto\Documents\LanguangeSpecific\dotnet\ASP.NET\api\HotelListing\HotelListing\bin\Debug\net5.0\X.PagedList.Mvc.Core.dll
