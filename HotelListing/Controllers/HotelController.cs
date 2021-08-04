@@ -160,5 +160,50 @@ namespace HotelListing.Controllers
         }
 
 
+
+
+        [Authorize(Roles = "Administrator")]
+        [HttpDelete("{id:int}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> DeleteHotel(int id)
+        {
+
+            if (id < 1)
+            {
+                _logger.LogInformation($"Invalid delete attempt in {nameof(DeleteHotel)}");
+                return BadRequest(ModelState);
+            }
+
+
+            try
+            {
+
+                var hotel = await _unitOfWork.Hotels.Get(q => q.Id == id);
+                if (hotel == null)
+                {
+                    _logger.LogInformation($"Invalid delete attempt in {nameof(DeleteHotel)}");
+                    return BadRequest("Submitted data is invalid");
+                }
+
+                await _unitOfWork.Hotels.Delete(id);
+                await _unitOfWork.Save();
+
+                return NoContent();
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, $"Something went wrong in {nameof(DeleteHotel)}");
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    "Internal server error. Please try again later");
+            }
+
+
+        }
+
+
+
+
     }
 }
