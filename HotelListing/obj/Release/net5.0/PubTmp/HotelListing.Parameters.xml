@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="HotelListing20210807214658" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\ashto\\Documents\\LanguangeSpecific\\dotnet\\ASP\.NET\\api\\HotelListing\\HotelListing\\obj\\Release\\net5\.0\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="HotelListing.Data.DatabaseContext" description="" value="Data Source=tcp:hotellistingdb.database.windows.net,1433;Initial Catalog=HotelListing_db;User Id=Ashton@hotellistingdb;Password=Cea$ar77" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\ashto\\Documents\\LanguangeSpecific\\dotnet\\ASP\.NET\\api\\HotelListing\\HotelListing\\obj\\Release\\net5\.0\\PubTmp\\EFSQLScripts\\HotelListing\.Data\.DatabaseContext\.sql$" />
+  </parameter>
+</parameters>

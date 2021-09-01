@@ -28,7 +28,6 @@ namespace HotelListing.Data
             builder.ApplyConfiguration(new HotelConfiguration());
             builder.ApplyConfiguration(new RoleConfiguration());
 
-  
         }
 
 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWqXGP7o5kk6Z9NChe3g2kQAAAAACAAAAAAAQZgAAAAEAACAAAABEGwthczt8Tp2YT020lRPo9Rs7POM8oIVqX3tqElP0iAAAAAAOgAAAAAIAACAAAABT/NrazFR3fKRMLILVgj3kb6q3loKhtNRiQKvA9zZEfIAAAABtVR9qkiuiInGtctArtHNR2crMQr21gx90FfHmFQOGWWAG9KKPrmGOLN2ju4IShNdVllApsEWucep5kKzJ2YIs8c/oBu620is+t4SZvIO37N9OS0/o1P2X9ZI3VwqpoIj00hKWe+ys3XHsNTYBsrC0EBn7t4e57IVp0UVbxydklUAAAABt2jRK9uYIjyeYcsCAfYXQ0J63mMIaCyKpxvNjxtqOxmoHpsN7j0NzugKExuKvA4WFPR7kbDyjzRwp0P1trzsx</EncryptedPassword>
+    <History>True|2021-08-07T20:18:07.6453296Z;True|2021-08-07T22:05:21.4461493+02:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="sqlConnection">
+      <Value>Data Source=tcp:hotellistingdb.database.windows.net,1433%3bInitial Catalog=HotelListing_db%3bUser Id=Ashton%40hotellistingdb%3bPassword=Cea%24ar77</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="HotelListing.Data.DatabaseContext">
+      <Value>Data Source=tcp:hotellistingdb.database.windows.net,1433%3bInitial Catalog=HotelListing_db%3bUser Id=Ashton%40hotellistingdb%3bPassword=Cea%24ar77</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

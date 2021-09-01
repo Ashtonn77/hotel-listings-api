@@ -14,6 +14,7 @@ using Serilog;
 
 namespace HotelListing.Controllers
 {
+
     [Route("api/[controller]")]
     [ApiController]
     public class AccountController : ControllerBase
@@ -77,6 +78,7 @@ namespace HotelListing.Controllers
         [Route("login")]
         public async Task<IActionResult> Login([FromBody] LoginUserDto userDto)
         {
+
             _logger.LogInformation($"Login attempt for {userDto.Email}");
             if (!ModelState.IsValid)
             {
@@ -99,8 +101,7 @@ namespace HotelListing.Controllers
                 //return Problem($"Something went wrong in the {nameof(Log)}", statusCode: 500);
                 return Problem(e.Message, statusCode: 500);
             }
-
-
+            
 
 
         }
